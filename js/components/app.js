@@ -1,10 +1,10 @@
 var React = require('react');
 var Reflux = require('reflux');
-var store = require('../stores/BaseStore');
+var store = require('../stores/baseStore');
 var actions = require('../actions/index');
 
 // Load components //
-var Welcome = require('./Welcome');
+var Welcome = require('./welcome');
 
 var App = React.createClass({
 
