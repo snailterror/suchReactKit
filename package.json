@@ -3,7 +3,7 @@
   "description": "wow wow wow",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "js/app.js",
+  "main": "dev/js/app.js",
   "keywords": [
     "such",
     "wow",
@@ -25,8 +25,8 @@
     "watchify": "~2.1.0"
   },
   "scripts": {
-    "start": "watchify -o js/bundle.js -v -d .",
-    "build": "browserify . | uglifyjs -cm > js/bundle.min.js"
+    "build": "browserify dev/js/app.js | uglifyjs -cm > dist/js/bundle.min.js",
+    "start": "watchify dev/js/app.js -do dist/js/bundle.js"
   },
   "browserify": {
     "transform": [
