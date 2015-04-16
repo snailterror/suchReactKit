@@ -1,18 +1,12 @@
 
 var React = require('react');
 var Reflux = require('reflux');
-
-var store = Reflux.createStore({
-    getInitialState(){
-        return{
-            data : {'title': 'Just wow'}
-        }
-    }
-});
-
+var store = require('./stores/BaseStore');
+var actions = require('./stores/BaseActions');
 
 var App = React.createClass({
 
+    listenables: [actions],
     mixins: [Reflux.connect(store)],
 
     render: function() {
