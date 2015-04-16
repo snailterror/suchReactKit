@@ -1,18 +1,26 @@
-/**
- * Created by Adrien on 15/04/2015.
- */
+
 var React = require('react');
+var Reflux = require('reflux');
+
+var store = Reflux.createStore({
+    getInitialState(){
+        return{
+            data : {'title': 'Just wow'}
+        }
+    }
+});
+
 
 var App = React.createClass({
-    getInitialState: function(){
-        return {data : {'title': 'Just wow'}};
-    },
+
+    mixins: [Reflux.connect(store)],
+
     render: function() {
         return(
             <div className="row">
                 <Welcome data={this.state.data}/>
             </div>
-        );
+        )
     }
 });
 
@@ -29,7 +37,7 @@ var Welcome = React.createClass({
                 <h1>{this.state.data.title}</h1>
                 <button onClick={this.handleWelcomeClick}>Welcome</button>
             </div>
-        );
+        )
     }
 });
 
