@@ -5,7 +5,7 @@ var React = require('react');
 
 var App = React.createClass({
     getInitialState: function(){
-        this.state.data = { title: 'Just wow' };
+        return {data : {'title': 'Just wow'}};
     },
     render: function() {
         return(
@@ -18,7 +18,7 @@ var App = React.createClass({
 
 var Welcome = React.createClass({
     getInitialState: function(){
-        this.state = this.props.data;
+        return {data : this.props.data};
     },
     handleWelcomeClick: function(e) {
         console.log('log', this.state.data);
@@ -26,7 +26,7 @@ var Welcome = React.createClass({
     render: function() {
         return(
             <div className="small-12.columns">
-                <h1>{this.state.title}</h1>
+                <h1>{this.state.data.title}</h1>
                 <button onClick={this.handleWelcomeClick}>Welcome</button>
             </div>
         );
