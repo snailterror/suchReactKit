@@ -4,3 +4,4 @@ node_modules/*
 suchReactKit.sublime-project
 suchReactKit.sublime-workspace
 npm-debug.log
+js/bundle.js
