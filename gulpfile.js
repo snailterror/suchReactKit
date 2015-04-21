@@ -40,7 +40,7 @@ gulp.task('serve', ['browserify','sass'], function() {
 
     browserSync.init({
         server: "./dist",
-        open: false
+        open: true
     });
     gulp.watch("dist/js/*.js", ['browserify']);
     gulp.watch("dev/*.scss", ['sass']);
