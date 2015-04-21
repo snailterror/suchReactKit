@@ -7,3 +7,4 @@ suchReactKit.sublime-workspace
 npm-debug.log
 dist/js/bundle.js
 dist/css/app.css
+dist/css/normalize.css

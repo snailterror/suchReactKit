@@ -7,6 +7,7 @@ var source = require('vinyl-source-stream'); // Used to stream bundle for furthe
 var browserify = require('browserify');
 var watchify = require('watchify');
 var reactify = require('reactify');
+var autoprefixer = require('gulp-autoprefixer');
 var sass        = require('gulp-sass');
 var reload      = browserSync.reload;
 
@@ -35,24 +36,29 @@ gulp.task('browserify', function() {
         .pipe(reload({stream: true}));
 });
 
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function() {
+    return gulp.src("dev/app.scss")
+        .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest("dist/css"))
+        .pipe(reload({stream: true}));
+});
+
 // Static Server + watching scss/html files
 gulp.task('serve', ['browserify','sass'], function() {
-
     browserSync.init({
         server: "./dist",
         open: true
     });
     gulp.watch("dist/js/*.js", ['browserify']);
-    gulp.watch("dev/*.scss", ['sass']);
+    gulp.watch("dev/styles/*.scss", ['sass']);
     gulp.watch("dist/*.html").on('change', reload);
 });
 
-// Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
-    return gulp.src("dev/*.scss")
-        .pipe(sass())
-        .pipe(gulp.dest("dist/css"))
-        .pipe(reload({stream: true}));
-});
+
 
 gulp.task('default', ['serve']);
