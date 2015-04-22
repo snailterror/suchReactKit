@@ -1,10 +1,9 @@
 .idea/
-dev/js/bundle.js
 node_modules/*
 bower_component/*
 suchReactKit.sublime-project
 suchReactKit.sublime-workspace
 npm-debug.log
-dist/js/bundle.js
-dist/css/app.css
-dist/css/normalize.css
+build/js/*
+build/css/*
+build/css/*

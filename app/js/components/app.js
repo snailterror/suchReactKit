@@ -12,7 +12,7 @@ var App = React.createClass({
 
     render: function() {
         return(
-            <div className="row">
+            <div className="welcome">
                 <Welcome data={this.state} onFireSubmit={actions.fire}/>
             </div>
         )
