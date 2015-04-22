@@ -10,7 +10,7 @@ gulp.task('browserSync', function() {
 		proxy: 'localhost:' + config.serverport,
 		open: true, //remove after fun
 		reloadDebounce: 2000,
-		browser: ["google chrome", "firefox", "safari"]
+		browser: ["google chrome"]
 	});
 
 });
