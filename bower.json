@@ -6,6 +6,7 @@
     "Raphael Martinez <raphael.mg1982@gmail.com>"
   ],
   "license": "MIT",
+  "main": "app/styles/app.css",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -14,6 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "foundation": "~5.5.1"
+    "foundation": "~5.4.7"
   }
 }

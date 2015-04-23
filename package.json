@@ -3,7 +3,7 @@
   "description": "wow wow wow",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "dev/js/app.js",
+  "main": "app/js/app.js",
   "keywords": [
     "such",
     "wow",
