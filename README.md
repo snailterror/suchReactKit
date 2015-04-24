@@ -31,12 +31,9 @@ Then navigate your browser to [http://localhost:3001](http://localhost:3001)
 
 * `gulp prod` to minify javascript and css files for production deployment
 
-### Common issues
-
-
 ## Contributors
 
-Adrien Espel
-Raphael Martinez
+* Adrien Espel
+* Raphael Martinez
 
 For more information on React please check out <http://facebook.github.io/react/>
