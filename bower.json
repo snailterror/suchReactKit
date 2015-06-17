@@ -1,0 +1,20 @@
+{
+  "name": "suchkit",
+  "version": "0.0.2",
+  "homepage": "https://github.com/snailterror/suchReactKit",
+  "authors": [
+    "Raphael Martinez <raphael.mg1982@gmail.com>"
+  ],
+  "license": "MIT",
+  "main": "app/styles/app.css",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.4.7"
+  }
+}
