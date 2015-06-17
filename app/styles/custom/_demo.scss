@@ -1,0 +1,29 @@
+//demo
+#app{
+	height: 100%;
+}
+
+.welcome {
+	text-align: center;
+	position: relative;
+	display: table;
+	width: 100%;
+	height: 100%;
+
+	.welcome-container{
+		display: table;
+		width: 100%;
+		height: 100%;
+
+		.welcome-doge {
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+			
+			h1{
+				color: orange;
+			}
+		}
+	}
+}
+
