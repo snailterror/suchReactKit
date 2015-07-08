@@ -16,6 +16,7 @@ gulp.task('sass', function () {
 			sourceMap: 'sass',
 			outputStyle: global.isProd ? 'compressed' : 'nested'
 		}))
+		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer("last 2 versions", "> 1%", "ie 8"))
 		.on('error', handleErrors)
 		.pipe(gulp.dest(config.styles.dest))

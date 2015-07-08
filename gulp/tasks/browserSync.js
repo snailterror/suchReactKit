@@ -8,7 +8,7 @@ gulp.task('browserSync', function() {
 
 	browserSync({
 		proxy: 'localhost:' + config.serverport,
-		open: true, //remove after fun
+		open: false, //remove after fun
 		reloadDebounce: 2000,
 		browser: ["google chrome"]
 	});
